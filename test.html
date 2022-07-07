@@ -32,14 +32,17 @@
 
 
     });
-      function areaWeather(weather, i, name) {
-    const element = document.createElement("p");
-    const newText = name + "地方： " + weather[i].srf.timeSeries[0].areas.weathers[2];
-    const newContent = document.createTextNode(newText);
-    element.appendChild(newContent);
-    const currentDiv = document.getElementById("p");
-    document.body.insertBefore(element, currentDiv);
-}
+      function(weather){
+        for(var i in weather) {
+          var h = '<div class="box">'
+          + name
+          + 地方
+          + weather[i].srf.timeSeries[0].areas.weathers[2]
+          + '</div>'
+
+          $("p#dico").append(h);
+        }
+      });
     </script>
 	</div>
 </body>
